@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+ }
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:white;
+  -webkit-transition: .4s;
+  transition: .4s;
+   border:solid 2px #d82a0f;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height:18px;
+  width:3px;
+  top:-5px;
+  left:5.8px;
+  background-color:#d82a0f;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-left: solid 6px white;
+  border-right: solid 6px white;
+}
+input:checked + .slider {
+ border: solid 2px #115913;
+}
+
+input:checked + .slider:before {
+   background-color:#115913;
+   border-left: solid 6px white;
+  border-right: solid 6px white;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 32px;
+}
+.head.icon {
+  cursor: pointer;
+  color: #000;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-top: solid 2px currentColor;
+  border-left: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  
+  border-radius: 50% 50% 20% 20%;
+}
+.head.icon:before{
+  content:'';
+ position: absolute;
+  left:0px;
+  top:27px;
+  border-radius:100%;
+  width:10px;
+  height:2px;
+  background-color: currentColor;
+  border: solid 6px currentColor;
+  border-right: solid .5px;
+}
+.head.icon:after{
+  content:'';
+ position: absolute;
+  right:0px;
+  top:27px;
+  border-radius: 100%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  border: solid 6px currentColor;
+  border-left: solid .5px ;
+}
+
+</style>
+<script type="text/javascript" src="popup.js"></script>
+</head>
+<body >
+  <span class="head icon"></span><br>
+  <label class="switch" style="float:right;">
+   <input type="checkbox"  name="switch1" class="onoffswitch-checkbox" id="switch1">
+  <span class="slider round"></span>
+</label>
+
+<h2>MUSICAL KEYBOARD</h2>
+</body>
+</html> 

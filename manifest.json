@@ -1,0 +1,29 @@
+{
+"manifest_version": 2,
+"name": "MUSICAL KEYBOARD",
+"version": "1.0",
+"content_scripts": [
+{
+
+"matches":[
+"*://*/*"
+],
+"js":["content.js"]
+}
+],
+  "permissions": [
+    "tabs", "<all_urls>",
+    "activeTab",
+    "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+ 
+"browser_action":{
+	"default_icon":"music.png",
+	"default_popup":"music.html",
+	"default__title":"Musical Keys" 
+},"icons": { "16": "icon48.png",
+           "48": "icon48.png",
+          "128": "icon128.png" }
+}
